@@ -1,0 +1,203 @@
+% !TeX program = xelatex
+\documentclass[11pt]{article}%create page with default fontsize of 12
+\usepackage[margin=0.5in]{geometry}%set dimensions of pdf and margin
+\usepackage{blindtext}%for testing
+\usepackage{fontspec}%for arial
+\usepackage{xcolor}%for text color and colored boxes
+\usepackage{parskip}%for creating vertical space between textb
+\usepackage{twemojis}%for emojis
+\usepackage{fontawesome}%for company logos
+\usepackage{enumitem}%for creating lists
+\usepackage{graphicx}%for images
+\usepackage{tikz}%for cropping images
+\usepackage{tcolorbox}%for creating boxes with ease
+\usepackage{dashrule}
+
+\graphicspath{{./images/}}
+
+\setmainfont{Arial}
+
+%taken from overleaf
+\newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=darkgray!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+%taken from overleaf
+\newcommand{\divider}{\textcolor{darkgray}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+
+\title{Connor Blaha}
+\date{}
+\begin{document}
+    %define background color for colored box
+    \definecolor{backgroundColor}{HTML}{365486}
+    \begin{tcolorbox}[colback=backgroundColor,sharp corners,boxrule=3mm,boxsep=0in, width=\dimexpr\textwidth+2in\relax,enlarge left by=-1in,enlarge top by= -1in,enlarge right by=1in,top=0.7in, left=1in, right=0.5in]
+        %colback sets background color
+        %sharp corners is so the corners aren't rounded
+        %boxrule is the thickness o f the box border
+        %boxsep is the padding
+        %width sets the width
+        %enlarge left +=-1in moves the box to the left by 1 in to ignore the preset margin
+        \begin{minipage}{4in}
+            \begin{flushleft}
+                {\fontspec{Times New Roman}\textbf{\Huge{\textcolor{white}{Connor Blaha}}}}
+                \vspace{0.125in}
+    
+    
+                \textit{\textbf{\textcolor[HTML]{DCF2F1}{\large{College Student}}}}
+                \vspace{0.125in}
+    
+    
+                \begin{tabular}{lcr}
+                    \textcolor{lightgray}{\small\faPhone\ 1-330-606-0527} &&
+                    \textcolor{lightgray}{\small\faEnvelope\ blaha.s.connor@gmail.com}\\
+                    \textcolor{lightgray}{\small\faLinkedinSquare\ linkedin.com/in/connor-blaha-b39609266}&&
+                    \textcolor{lightgray}{\small\faGithubSquare\ https://github.com/SunCh1p}\\
+                \end{tabular}
+            \end{flushleft}
+        \end{minipage}
+        \hspace{1in}
+        \begin{minipage}{2in}
+            \begin{tikzpicture}
+                \centering
+                \clip (0,0) circle (1.5cm) node {\includegraphics[width=3cm]{profile-img.jpg}};
+            \end{tikzpicture}
+            \centering
+        \end{minipage}
+    \end{tcolorbox}
+    \vspace{0.125in}
+
+    \begin{minipage}[t]{4in}
+        \begin{flushleft}
+            \fontspec{Times New Roman}{\textcolor[HTML]{0F1035}{\textbf{\faFolder\ \Large{Projects}}}}\\
+            \textcolor[HTML]{0F1035}{\rule{4in}{0.25mm}}
+            \begin{tcolorbox}[colback=white, colframe=white]
+                \normalsize
+                \fontspec{Arial}{
+                \textbf{SDL2 Game(In progress)}
+                \begin{itemize}[label=\faCalendar]
+                    \item December 2023 - Present
+                \end{itemize}
+                \begin{itemize}[left = 0pt]
+                    \item[] Programmed using C++ and SDL2, application is currently in development
+                \end{itemize}
+
+
+                \divider
+
+
+                \textbf{Minesweeper Application}
+                \begin{itemize}[label=\faCalendar]
+                    \item February 2023 - April 2023
+                \end{itemize}
+                \begin{itemize}[left = 0pt]
+                    \item[] Built minesweeper application using python3 and pygame. Game is fully functional.
+                \end{itemize}
+
+
+                \divider
+
+
+                \textbf{Personal Website}
+                \begin{itemize}[label=\faCalendar]
+                    \item November 2023 - Present
+                \end{itemize}
+                \begin{itemize}[left = 0pt]
+                    \item[] Built front-end responsive website built using HTML, CSS, and Javascript.\\
+                \end{itemize}}
+                
+            \end{tcolorbox}
+
+            \fontspec{Times New Roman}{\textcolor[HTML]{0F1035}{\textbf{\Large{\faBriefcase\ Employment History}}}}\\
+            \textcolor[HTML]{0F1035}{\rule{4in}{0.25mm}}
+            \par
+            \fontspec{Arial}{
+            \textbf{Walmart}
+                \begin{itemize}[label=\faCalendar]
+                    \small
+                    \item July 2023 - Present
+                    \item[\faMapMarker] Streetsboro Ohio
+                \end{itemize}
+                \normalsize
+                \begin{itemize}[left = 0pt]
+                    \item[] Online Personal Shopper
+                \end{itemize}
+            \divider
+
+            \textbf{Texas Roadhouse}
+                \begin{itemize}[label=\faCalendar]
+                    \small
+                    \item April 2022 - June 2023
+                    \item[\faMapMarker] Athens Ohio
+                \end{itemize}
+                \normalsize
+                \begin{itemize}[left = 0pt]
+                    \item[] Kitchen Staff
+                \end{itemize}
+            \divider
+
+            \textbf{Pizza Cottage}
+            \begin{itemize}[label=\faCalendar]
+                \small
+                \item September 2021 - March 2022
+                \item[\faMapMarker] Athens Ohio
+            \end{itemize}
+            \normalsize
+            \begin{itemize}[left = 0pt]
+                \item[] Kitchen Staff
+            \end{itemize}
+            \divider
+
+            \textbf{Walmart}
+            \begin{itemize}[label=\faCalendar]
+                \small
+                \item June 2021 - August 2021
+                \item[\faMapMarker] Logan Ohio
+            \end{itemize}
+            \normalsize
+            \begin{itemize}[left = 0pt]
+                \item[] Janitor
+            \end{itemize}}
+            \divider
+        \end{flushleft}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{3in}
+        \begin{flushleft}
+            \fontspec{Times New Roman}{\textcolor[HTML]{0F1035}{\textbf{\faUser\ \Large{About me}}}}\\
+            \textcolor[HTML]{0F1035}{\rule{3in}{0.25mm}}
+                \par
+                \textcolor{darkgray}{\fontspec{Arial}{\textbf{\small{Aspiring and dedicated Computer Science student seeking an internship position in software engineering. 
+                I hold a strong belief in discipline and I am dedicated to improving myself each and every day.}}}}
+
+
+            \vspace{0.25in}
+            \fontspec{Times New Roman}{\textcolor[HTML]{0F1035}{\faWrench\ \textbf{\Large{Skills}}}}\\
+            \textcolor[HTML]{0F1035}{\rule{3in}{0.25mm}}
+            \vspace{0.0125in}
+                \begin{itemize}[label=\faChevronRight, itemsep = 5pt]
+                    \small{
+                    \fontspec{Arial}{
+                    \item \cvtag{C++}
+                    \item \cvtag{Python3}
+                    \item \cvtag{HTML}
+                    \item \cvtag{CSS}
+                    \item \cvtag{Javascript}
+                    \item \cvtag{\LaTeX}}}
+                \end{itemize}
+
+
+            \vspace{0.25in}    
+            \fontspec{Times New Roman}{\textcolor[HTML]{0F1035}{\textbf{\faBook\ \Large{Education}}}}\\
+            \textcolor[HTML]{0F1035}{\rule{3in}{0.25mm}}
+                \begin{itemize}[left=0pt]
+                    \fontspec{Arial}{
+                    \item[] \faCertificate\ Pursuing B.S. in Computer Science\\\faMapMarker\ \ \textbf{Kent State University}\\\small{\faGraduationCap Cumulative Gpa: N/A\\\faCalendar\ Spring 2024 - Present}
+                    \vspace{0.125in}
+                    \normalsize
+                    \item[] \faCertificate\ Pursued B.S. in Computer Science\\\faMapMarker\ \ \textbf{Ohio University}\tiny{\textit{[Transferred KSU]}}\\\small{\faGraduationCap Cumulative Gpa: 3.565\\\faCalendar\ Fall 2019 - Spring 2023}}
+                \end{itemize}
+            
+        \end{flushleft}
+    \end{minipage}
+
+\thispagestyle{empty}
+\end{document}
